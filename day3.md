@@ -201,8 +201,10 @@ ON T1.user_id = T2.buyer_id
 AND LEFT(T2.order_date, 4) = '2019'
 GROUP BY T1.user_id 
 ```
-</br> 
-## 	182. Duplicate Emails   
+</br>  
+
+
+## 182. Duplicate Emails   
 
 Table: Person  
 
