@@ -517,10 +517,12 @@ Explanation: The folowing table is ordered by the turn for simplicity.
 | 3    | 6  | John Cena | 400    | 1000         | 
 | 4    | 2  | Marie     | 200    | 1200         | 
 | 5    | 4  | Bob       | 175    | ___          |
-| 6    | 1  | Winston   | 500    | ___          |
+| 6    | 1  | Winston   | 500    | ___          |  
+
 John is (last person to board)  
-marie (cannot board)  
-A:    
+Marie (cannot board)  
+
+A:  
 ```
 with aa as(
 select
@@ -680,14 +682,16 @@ On 2013-10-01:
   - There were 4 requests in total, 2 of which were canceled.  
   - However, the request with Id=2 was made by a banned client (User_Id=2), so it is ignored in the calculation.  
   - Hence there are 3 unbanned requests in total, 1 of which was canceled.  
-  - The Cancellation Rate is (1 / 3) = 0.33. 
+  - The Cancellation Rate is (1 / 3) = 0.33  
+
 On 2013-10-02:  
   - There were 3 requests in total, 0 of which were canceled.  
   - The request with Id=6 was made by a banned client, so it is ignored.  
   - Hence there are 2 unbanned requests in total, 0 of which were canceled.  
   - The Cancellation Rate is (0 / 2) = 0.00  
+
 On 2013-10-03:  
-  - There were 3 requests in total, 1 of which was canceled.   
+  - There were 3 requests in total, 1 of which was canceled.  
   - The request with Id=8 was made by a banned client, so it is ignored.  
   - Hence there are 2 unbanned request in total, 1 of which were canceled.  
   - The Cancellation Rate is (1 / 2) = 0.50  
