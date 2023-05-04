@@ -5,7 +5,8 @@ Table: Tweets
 | Column Name    | Type    |
 | ------------ | ---- |
 | tweet_id       | int     |
-| content        | varchar |
+| content        | varchar |  
+
 tweet_id is the primary key for this table.  
 This table contains all the tweets in a social media app.  
 
@@ -559,8 +560,8 @@ on
 group by
     a.product_id;
 ```
-*At first I was confused with how to get the average selling price, I was thinking about using the function AVG(). It turned out we have to do like this: *
-*In order to get the average price, we have to JOIN the prices table and unitssold table ON product_id and the purchase_date because the prices are different. Then we have to get the total selling price by SUM(price*units). Then it is divided by the total number of units sold to get the average price for each product.*
+*At first I was confused with how to get the average selling price, I was thinking about using the function AVG(). It turned out we have to do like this: 
+In order to get the average price, we have to JOIN the prices table and unitssold table ON product_id and the purchase_date because the prices are different. Then we have to get the total selling price by SUM(price*units). Then it is divided by the total number of units sold to get the average price for each product.*
 
 
 </br>
@@ -781,5 +782,5 @@ from
 group by
     query_name;
 ```
-*Once again, using the SUM(IF()) function. The logic is this: *
-*We first need to get the quality, which is the sum of ration of rating and position, divided by total number of count for each query_name. Then we have to figure out the poor query percentage, which is if the rating is < 3 then it is poor so we add them up and divided by total number of count for each query_name again, multiply by 100 to make it percentage.*
+*Once again, using the SUM(IF()) function. The logic is this: 
+We first need to get the quality, which is the sum of ration of rating and position, divided by total number of count for each query_name. Then we have to figure out the poor query percentage, which is if the rating is < 3 then it is poor so we add them up and divided by total number of count for each query_name again, multiply by 100 to make it percentage.*
