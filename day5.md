@@ -561,7 +561,7 @@ group by
     a.product_id;
 ```
 *At first I was confused with how to get the average selling price, I was thinking about using the function AVG(). It turned out we have to do like this: 
-In order to get the average price, we have to JOIN the prices table and unitssold table ON product_id and the purchase_date because the prices are different. Then we have to get the total selling price by SUM(price*units). Then it is divided by the total number of units sold to get the average price for each product.*
+In order to get the average price, we have to JOIN the prices table and unitssold table ON product_id and the purchase_date because the prices are different. Then we have to get the total selling price by SUM(priceXunits). Then it is divided by the total number of units sold to get the average price for each product.*
 
 
 </br>
